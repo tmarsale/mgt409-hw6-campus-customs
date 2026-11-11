@@ -377,3 +377,20 @@ Record this prompt in `AI_prompts.md` under Problem 10.
 ### Follow-up prompts
 
 _None yet._
+
+### Results summary
+
+- **Published at:** **https://github.com/tmarsale/mgt409-hw6-campus-customs** (public, branch `main`).
+- **Packaging:** the project was copied into a separate `Homework/hw6-submission/hw6/` folder, and the HW6 working folder was left as it is.
+  - All 65 copied files, including every `data/` and `output/` file, are byte-identical to the working folder (checked by SHA-256 hash).
+  - Only the repository's setup files were changed: `.env.example` (placeholders), and `requirements.txt` (pinned to the tested versions).
+  - New files: a top-level `README.md`, `.gitignore` (`.env`, `.venv`, caches, `.claude/`, `approvals.json`), and `.gitattributes` (`* -text`, so the PDF and `.eml` test files can't be altered by line-ending conversion).
+- **Credential check before publishing:**
+  - No key patterns, no part of the real `PORTKEY_API_KEY`, no personal email, name, or local paths in any file.
+  - No author metadata in the PDFs or PNGs.
+  - Only `.env.example` is committed, and commits use the GitHub no-reply address.
+- **Checks after publishing:**
+  - The repository page and the raw report return HTTP 200 without logging in; the API shows `"visibility": "public"`.
+  - An anonymous `git clone` worked, and the pinned requirements installed.
+  - `build_report.py` rebuilt a byte-identical report.
+  - A live `secure_agent.py p01` run from the clone returned the correct decision.
