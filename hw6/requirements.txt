@@ -1,0 +1,5 @@
+# Versions used for every HW6 test run (Python 3.14).
+pydantic-ai-slim[openai]==2.66.0
+openai==3.48.0
+pypdf==7.0.0
+python-dotenv==1.2.4
